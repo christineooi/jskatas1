@@ -66,6 +66,15 @@
 
     <script>
         const sampleArray = [469, 755, 244, 245, 758, 450, 302, 20, 712, 71, 456, 21, 398, 339, 882, 848, 179, 535, 940, 472];
+
+    //Function to remove trailing commas
+    function removeLastComma (str) {
+        str = str.trim();
+        if (str.substring(str.length-1) === ","){
+            str = str.substring(0, str.length-1);
+        }
+        return str;
+    }
 //1
         var newText1 = "";
         for(var i=1; i <= 20; i++){
@@ -84,6 +93,7 @@
                 newText2 += i + ", ";
             }
         }
+        newText2 = removeLastComma(newText2);
         document.getElementById('d2').textContent  = newText2;
 // 3
         var newText3 = "";
@@ -92,6 +102,7 @@
                 newText3 += i + ", ";
             }
         }
+        newText3 = removeLastComma(newText3);
         document.getElementById('d3').textContent  = newText3;
 // 4
         var newText4 = "";
@@ -100,12 +111,14 @@
                 newText4 += i + ", ";
             }
         }
+        newText4 = removeLastComma(newText4);
         document.getElementById('d4').textContent  = newText4;
 
 //5
         for(var i=1; i <= 20; i++){
             var newElement = document.createElement("spanEl"); 
             var newText = document.createTextNode(i*i + ", ");
+            // newText = removeLastComma(newText);
             newElement.appendChild(newText);
             var destination = document.getElementById("d5");
             destination.appendChild(newElement);
@@ -119,6 +132,7 @@
                 newText6 += i + ", ";
             }
         }
+        newText6 = removeLastComma(newText6);
         document.getElementById('d6').textContent  = newText6;
 
 //7
@@ -128,6 +142,7 @@
                 newText7 += i + ", ";
             }
         }
+        newText7 = removeLastComma(newText7);
         document.getElementById('d7').textContent  = newText7; 
 
 //8 
@@ -137,6 +152,7 @@
                 newText8 += i + ", ";
             }
         }
+        newText8 = removeLastComma(newText8);
         document.getElementById('d8').textContent  = newText8;  
 
 //9
@@ -147,6 +163,7 @@
                 newText9 += i + ", ";
             }
         }
+        newText9 = removeLastComma(newText9);
         document.getElementById('d9').textContent  = newText9; 
 
 //10
@@ -155,6 +172,7 @@
             newText10 += i*i + ", ";
             
         }
+        newText10 = removeLastComma(newText10);
         document.getElementById('d10').textContent  = newText10; 
 
 //11
@@ -162,6 +180,7 @@
         for(var i=0; i < sampleArray.length; i++){
             newText11 += sampleArray[i] + ", ";
         }
+        newText11 = removeLastComma(newText11);
         document.getElementById('d11').textContent  = newText11; 
 
 //12
@@ -171,6 +190,7 @@
                 newText12 += sampleArray[i] + ", ";
             }
         }
+        newText12 = removeLastComma(newText12);
         document.getElementById('d12').textContent  = newText12; 
 
 //13
@@ -180,12 +200,14 @@
                 newText13 += sampleArray[i] + ", ";
             }
         }
+        newText13 = removeLastComma(newText13);
         document.getElementById('d13').textContent  = newText13; 
 //14
         var newText14 = "";
         for(var i=0; i < sampleArray.length; i++){
             newText14 += sampleArray[i]*sampleArray[i] + ", ";
         }
+        newText14 = removeLastComma(newText14);
         document.getElementById('d14').textContent  = newText14; 
 
 //15
