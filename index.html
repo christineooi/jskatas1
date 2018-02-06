@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Javascript Katas 1</title>
+    <style>
+      .rect {background: gray; margin: 10px; color: white;}
+      .rect2 {background: gray; margin: 10px; color: white;}
+      .rect3 {background: gray; margin: 10px; color: white;}
+      .rect4 {margin: 10px; color: white;}
+      .rect5 {margin: 10px; color: white;}
+      h1 {
+          text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Javascript Katas 1</h1>
+    <h5>1. </h5>
+    <div id="d1"></div>
+    <h5>2. </h5>
+    <div id="d2"></div>
+    <h5>3. </h5>
+    <div id="d3"></div>
+    <h5>4. </h5>
+    <div id="d4"></div>
+    <h5>5. </h5>
+    <div id="d5"></div>
+    <h5>6. </h5>
+    <div id="d6"></div>
+    <h5>7. </h5>
+    <div id="d7"></div>
+    <h5>8. </h5>
+    <div id="d8"></div>
+    <h5>9. </h5>
+    <div id="d9"></div>
+    <h5>10. </h5>
+    <div id="d10"></div>
+    <h5>11. </h5>
+    <div id="d11"></div>
+    <h5>12. </h5>
+    <div id="d12"></div>
+    <h5>13. </h5>
+    <div id="d13"></div>
+    <h5>14. </h5>
+    <div id="d14"></div>
+    <h5>15. </h5>
+    <div id="d15"></div>
+    <h5>16. </h5>
+    <div id="d16"></div>
+    <h5>17. </h5>
+    <div id="d17"></div>
+    <h5>18. </h5>
+    <div id="d18"></div>
+    <h5>19. </h5>
+    <div id="d19"></div>
+    <h5>20. </h5>
+    <div id="d20"></div>
+    <h5>21. </h5>
+    <div id="d21"></div>
+    <h5>22. </h5>
+    <div id="d22"></div>
+    <h5>23. </h5>
+    <div id="d23"></div>
+
+    <script>
+        const sampleArray = [469, 755, 244, 245, 758, 450, 302, 20, 712, 71, 456, 21, 398, 339, 882, 848, 179, 535, 940, 472];
+//1
+        var newText1 = "";
+        for(var i=1; i <= 20; i++){
+            if (i === 20){
+                newText1 += i;
+            } else {
+                newText1 += i + ", ";
+            }
+        }
+        document.getElementById('d1').textContent  = newText1;
+
+// 2
+        var newText2 = "";
+        for(var i=1; i <= 20; i++){
+            if (i%2 === 0){
+                newText2 += i + ", ";
+            }
+        }
+        document.getElementById('d2').textContent  = newText2;
+// 3
+        var newText3 = "";
+        for(var i=1; i <= 20; i++){
+            if (i%2 === 1){
+                newText3 += i + ", ";
+            }
+        }
+        document.getElementById('d3').textContent  = newText3;
+// 4
+        var newText4 = "";
+        for(var i=1; i <= 100; i++){
+            if (i%5 === 0){
+                newText4 += i + ", ";
+            }
+        }
+        document.getElementById('d4').textContent  = newText4;
+
+//5
+        for(var i=1; i <= 20; i++){
+            var newElement = document.createElement("spanEl"); 
+            var newText = document.createTextNode(i*i + ", ");
+            newElement.appendChild(newText);
+            var destination = document.getElementById("d5");
+            destination.appendChild(newElement);
+        }        
+//6
+        var newText6 = "";
+        for(var i=20; i >= 1; i--){
+            if (i === 1){
+                newText6 += i;
+            } else {
+                newText6 += i + ", ";
+            }
+        }
+        document.getElementById('d6').textContent  = newText6;
+
+//7
+        var newText7 = "";
+        for(var i=20; i >= 1; i--){
+            if (i%2 === 0){
+                newText7 += i + ", ";
+            }
+        }
+        document.getElementById('d7').textContent  = newText7; 
+
+//8 
+        var newText8 = "";
+        for(var i=20; i >= 1; i--){
+            if (i%2 === 1){
+                newText8 += i + ", ";
+            }
+        }
+        document.getElementById('d8').textContent  = newText8;  
+
+//9
+
+        var newText9 = "";
+        for(var i=20; i >= 1; i--){
+            if (i%5 === 0){
+                newText9 += i + ", ";
+            }
+        }
+        document.getElementById('d9').textContent  = newText9; 
+
+//10
+        var newText10 = "";
+        for(var i=100; i >= 1; i--){
+            newText10 += i*i + ", ";
+            
+        }
+        document.getElementById('d10').textContent  = newText10; 
+
+//11
+        var newText11 = "";
+        for(var i=0; i < sampleArray.length; i++){
+            newText11 += sampleArray[i] + ", ";
+        }
+        document.getElementById('d11').textContent  = newText11; 
+
+//12
+        var newText12 = "";
+        for(var i=0; i < sampleArray.length; i++){
+            if (sampleArray[i]%2 === 0) {
+                newText12 += sampleArray[i] + ", ";
+            }
+        }
+        document.getElementById('d12').textContent  = newText12; 
+
+//13
+        var newText13 = "";
+        for(var i=0; i < sampleArray.length; i++){
+            if (sampleArray[i]%2 === 1) {
+                newText13 += sampleArray[i] + ", ";
+            }
+        }
+        document.getElementById('d13').textContent  = newText13; 
+//14
+        var newText14 = "";
+        for(var i=0; i < sampleArray.length; i++){
+            newText14 += sampleArray[i]*sampleArray[i] + ", ";
+        }
+        document.getElementById('d14').textContent  = newText14; 
+
+//15
+        var sumNum = 0;
+        for(var i=1; i <= 20; i++){
+            sumNum += i;
+        }
+        document.getElementById('d15').textContent  = sumNum;
+//16
+        var sumNum = 0;
+        for(var i=0; i < sampleArray.length; i++){
+            sumNum += sampleArray[i];
+        }
+        document.getElementById('d16').textContent  = sumNum; 
+//17
+        var minVal = sampleArray[0];
+        for(var i=0; i < sampleArray.length; i++){
+            if (sampleArray[i] < minVal){
+                minVal = sampleArray[i];
+            }
+        }
+        document.getElementById('d17').textContent  = minVal; 
+//18
+        var maxVal = sampleArray[0];
+        for(var i=0; i < sampleArray.length; i++){
+            if (sampleArray[i] > maxVal){
+                maxVal = sampleArray[i];
+            }
+        }
+        document.getElementById('d18').textContent  = maxVal; 
+
+//19
+        for(i=1; i<=20; i++) {
+        // Create a div, with class "rect", and set the width to 100px.
+        var newElement = document.createElement("span");
+        newElement.className = "rect";
+        newElement.style.width = "100px";
+        newElement.style.height = "20px";
+        
+        // Place a text label inside the new div.
+        var newText = document.createTextNode("Rectangle #" + i);
+        newElement.appendChild(newText);
+
+        // Put the new div on the page inside the existing element "d19".
+        var destination = document.getElementById("d19");
+        destination.appendChild(newElement);
+      }
+//20
+      //Create an array of widths for rect2
+      var widthArray = [];
+      for (var x=105; x<=200; x++){
+        if (x%5 === 0){
+            widthArray.push(x);
+        }
+      }
+
+        for(i=1; i<=20; i++) {
+        // Create a div, with class "rect2", and set css properties.
+        var newElement = document.createElement("div");
+        newElement.className = "rect2";
+        newElement.style.height = "20px";
+
+        newElement.style.width = widthArray[i-1] + "px";
+        
+        // Place a text label inside the new div.
+        var newText = document.createTextNode("Rectangle #" + i);
+        newElement.appendChild(newText);
+
+        // Put the new div on the page inside the existing element "d20".
+        var destination = document.getElementById("d20");
+        destination.appendChild(newElement);
+      }
+
+//21
+        for(i=1; i<=20; i++) {
+        // Create a div, with class "rect3", and set css properties.
+        var newElement = document.createElement("div");
+        newElement.className = "rect3";
+        newElement.style.height = "20px";
+
+        newElement.style.width = sampleArray[i-1] + "px";
+        
+        // Place a text label inside the new div.
+        var newText = document.createTextNode("Rectangle #" + i);
+        newElement.appendChild(newText);
+
+        // Put the new div on the page inside the existing element "d21".
+        var destination = document.getElementById("d21");
+        destination.appendChild(newElement);
+      }
+
+//22
+        for(i=1; i<=20; i++) {
+        // Create a div, with class "rect4", and set css properties
+        var newElement = document.createElement("div");
+        newElement.className = "rect4";
+        newElement.style.height = "20px";
+        newElement.style.width = sampleArray[i-1] + "px";
+        if (i%2 === 0) {
+            newElement.style.background = "red";
+        } else {
+            newElement.style.background = "gray";
+        }
+       
+        // Place a text label inside the new div.
+        var newText = document.createTextNode("Rectangle #" + i);
+        newElement.appendChild(newText);
+
+        // Put the new div on the page inside the existing element "d22".
+        var destination = document.getElementById("d22");
+        destination.appendChild(newElement);
+    }
+        
+//23
+        for(i=1; i<=20; i++) {
+        // Create a div, with class "rect5", and set css properties.
+        var newElement = document.createElement("div");
+        newElement.className = "rect5";
+        newElement.style.height = "20px";
+        newElement.style.width = sampleArray[i-1] + "px";
+        if (sampleArray[i-1]%2 === 0) {
+            newElement.style.background = "red";
+        } else {
+            newElement.style.background = "gray";
+        }
+       
+        // Place a text label inside the new div.
+        var newText = document.createTextNode("Rectangle #" + i);
+        newElement.appendChild(newText);
+
+        // Put the new div on the page inside the existing element "d23".
+        var destination = document.getElementById("d23");
+        destination.appendChild(newElement);
+    }
+    </script>
+  </body>
+</html>
